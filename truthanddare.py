@@ -4,6 +4,8 @@ import random
 import json
 from typing import Dict, List
 from datetime import datetime
+import os
+from telegram import Application
 
 # Logging
 import logging
@@ -719,10 +721,16 @@ async def handle_join_button(update: Update, context: ContextTypes.DEFAULT_TYPE)
             )
 
 def main():
-    # Load your bot token from environment variable or config file
-    
-    
+    # Load your bot token from the environment variable
+    TOKEN = os.getenv("BOT_TOKEN")
+    if not TOKEN:
+        raise ValueError("No BOT_TOKEN found. Set it as an environment variable.")
+
+    # Build your application
     application = Application.builder().token(TOKEN).build()
+
+    # Add your bot's handlers and start logic here
+    print("Bot is running...")
     
     # Add handlers
     application.add_handler(CommandHandler("start", start))
