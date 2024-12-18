@@ -1,4 +1,4 @@
-python-telegram-bot==20.0
-typing-extensions==4.8.0
-Flask==2.3.3  # If using Flask for webhooks
-python-dotenv==1.0.0  # If using .env files for environment variables
+python-telegram-bot
+typing-extensions
+Flask # If using Flask for webhooks
+python-dotenv # If using .env files for environment variables
