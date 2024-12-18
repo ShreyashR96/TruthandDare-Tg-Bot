@@ -720,7 +720,7 @@ async def handle_join_button(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 def main():
     # Load your bot token from environment variable or config file
-    TOKEN = "6636685692:AAGnMpwHop-sieiT60Egratd4mIrHdBZ7uk"
+    
     
     application = Application.builder().token(TOKEN).build()
     
