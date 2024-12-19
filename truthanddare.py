@@ -731,6 +731,8 @@ def main():
 
     # Add your bot's handlers and start logic here
     print("Bot is running...")
+    if __name__ == "__main__":
+    main()
     
     # Add handlers
     application.add_handler(CommandHandler("start", start))
@@ -756,5 +758,3 @@ def main():
     # Start the bot
     application.run_polling()
 
-if __name__ == "__main__":
-    main()
