@@ -2,3 +2,4 @@ python-telegram-bot==20.0
 typing-extensions
 Flask # If using Flask for webhooks
 python-dotenv # If using .env files for environment variables
+gunicorn==21.2.0
