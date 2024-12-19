@@ -33,14 +33,13 @@ class TruthDareGame:
             "Party", "Game", "Round", "Tournament", "Battle",
             "Contest", "Championship", "Match", "Session", "Series"
         ]
-        
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-PORT = int(os.getenv("PORT", 10000))  # Render provides the PORT environment variable
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
+    PORT = int(os.getenv("PORT", 10000))  # Render provides the PORT environment variable
 
 # App and Bot Initialization
-app = Flask(__name__)
-bot = Bot(token=BOT_TOKEN)
-dispatcher = Dispatcher(bot, None, workers=4)  # Dispatcher with 4 workers
+    app = Flask(__name__)
+    bot = Bot(token=BOT_TOKEN)
+    dispatcher = Dispatcher(bot, None, workers=4)  # Dispatcher with 4 workers
     
     def load_questions(self):
         # Load truth and dare questions from JSON files
@@ -770,7 +769,7 @@ def main():
     application.run_polling()
 
 # Flask Routes
-@app.route('/webhook', methods=['POST'])
+    @app.route('/webhook', methods=['POST'])
 def webhook():
     update = Update.de_json(request.get_json(force=True), bot)
     dispatcher.process_update(update)
