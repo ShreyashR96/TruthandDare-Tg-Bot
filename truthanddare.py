@@ -5,7 +5,6 @@ import json
 from typing import Dict, List
 from datetime import datetime
 import os
-from telegram import Application
 
 # Logging
 import logging
