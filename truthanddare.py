@@ -731,7 +731,8 @@ def main():
 
     # Add your bot's handlers and start logic here
     print("Bot is running...")
-    if __name__ == "__main__":
+
+if __name__ == "__main__":
     main()
     
     # Add handlers
