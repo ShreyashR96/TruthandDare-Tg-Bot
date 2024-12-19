@@ -719,9 +719,6 @@ async def handle_join_button(update: Update, context: ContextTypes.DEFAULT_TYPE)
                 show_alert=True
             )
 
-import os
-from telegram.ext import Application  # Ensure you have the correct import for your bot framework
-
 def main():
     # Read the bot token from the environment variable
     BOT_TOKEN = os.getenv('BOT_TOKEN')
@@ -738,8 +735,7 @@ def main():
     # Uncomment the following line to start the bot (if needed):
     # application.run_polling()
 
-if __name__ == "__main__":
-    main()
+
     
     # Add handlers
     application.add_handler(CommandHandler("start", start))
