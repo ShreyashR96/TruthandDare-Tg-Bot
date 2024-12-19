@@ -770,7 +770,8 @@ def main():
 
 # Flask Routes
     @app.route('/webhook', methods=['POST'])
-def webhook():
+    
+    def webhook():
     update = Update.de_json(request.get_json(force=True), bot)
     dispatcher.process_update(update)
     return "OK", 200
