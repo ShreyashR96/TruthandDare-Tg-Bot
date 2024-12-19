@@ -720,13 +720,14 @@ async def handle_join_button(update: Update, context: ContextTypes.DEFAULT_TYPE)
             )
 
 def main():
-    # Load your bot token from the environment variable
-    TOKEN = os.getenv("BOT_TOKEN")
-    if not TOKEN:
+    # Read the bot token from the environment variable
+    BOT_TOKEN = os.getenv('BOT_TOKEN')
+
+    if not BOT_TOKEN:
         raise ValueError("No BOT_TOKEN found. Set it as an environment variable.")
 
-    # Build your application
-    application = Application.builder().token(TOKEN).build()
+    # Continue with bot setup and execution
+    application = Application.builder().token(BOT_TOKEN).build()
 
     # Add your bot's handlers and start logic here
     print("Bot is running...")
